@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 2em;
+    border-right: 5px solid black;
+    padding-right: 1em;
+}
+
+.header img{
+    height: 100px;
+    width: 120px;
+}
+
+.header .office-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.header .office-info p{
+    font-size: large;
+    font-weight: bold;
+}
+
+.page-title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.business-form h2{
+    margin-bottom: 0.5em;
+}
+
+.business-form-body{
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    border-top: 3px ridge black;
+    border-bottom: 3px ridge black;
+    border-radius: 5px;
+}
+
+.business-info, .proprietor-info, .citizenship-info, .certificate-info{
+    margin: 0 1em;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+input{
+    padding: 0.3em 0;
+    font-size: 1em;
+    margin: 0.3em 0;
+    width: 100%;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.button-container button{
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px ridge green;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+.button-container button:hover{
+    cursor: pointer;
+    border: 2px solid rgb(202, 199, 196);
+}

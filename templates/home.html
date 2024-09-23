@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'images/gov logo.png' %}">
+    <title>व्यापार व्यवसाय दर्ता</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    {{form.media}}
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'images/gov logo.png' %}" alt="bhimeshwor mun logo"/>
+        <div class="office-info">
+            <h1> भीमेश्वर नगरपालिका </h1>
+            <p> चरिकोट, दोलखा </p>
+        </div>
+    </div>
+
+    <form action="{% url 'generate-certificate' %}" class="business-form" method="post" >
+        <h2 class="page-title"> व्यवसाय दर्ता </h2>
+        {% csrf_token %}
+        <div class="business-form-body">
+
+            <div class="business-info">
+                <h3> व्यवसाय सम्बन्धि विवरण </h3>
+                <div class="business-name">
+                    {{form.business_name.label_tag}}
+                    {{ form.business_name }}
+                </div>
+
+                <div class="business-start-date">
+                    {{form.business_start_date.label_tag}}
+                    {{form.business_start_date}}
+                </div>
+
+                <div class="business-address">
+                    {{form.business_address.label_tag}}
+                    {{form.business_address}}
+                </div>
+
+                <div class="business-type">
+                    {{form.business_type.label_tag}}
+                    {{form.business_type}}
+                </div>
+
+                <div class="investment-date">
+                    {{form.investment_amount.label_tag}}
+                    {{form.investment_amount}}
+                </div>
+            </div>
+    
+    
+
+            <div class="proprietor-info">
+                <h3> प्रोपाइटरको विवरण </h3>
+                <div class="proprietor-name">
+                    {{form.proprietor_name.label_tag}}
+                    {{form.proprietor_name}}
+                </div>
+
+                <div class="permanent-address">
+                    {{form.permanent_address.label_tag}}
+                    {{form.permanent_address}}
+                </div>
+
+                <div class="father-or-husband-name">
+                    {{form.father_or_husband_name.label_tag}}
+                    {{form.father_or_husband_name}}
+                </div>
+
+                <div class="grandfather-or-fil-name">
+                    {{form.grandfather_or_fil_name.label_tag}}
+                    {{form.grandfather_or_fil_name}}
+                </div>
+
+            </div>
+    
+
+            <div class="citizenship-info">
+                <h3> नागरिकता विवरण </h3>
+                <div class="citizenship-number">
+                    {{form.citizenship_number.label_tag}}
+                    {{form.citizenship_number}}
+                </div>
+
+                <div class="citizenship-issue-date">
+                    {{form.citizenship_issue_date.label_tag}}
+                    {{form.citizenship_issue_date}}
+                </div>
+
+                <div class="citizenship-issue-district">
+                    {{form.citizenship_issue_district.label_tag}}
+                    {{form.citizenship_issue_district}}
+                </div>
+            </div>  
+            
+            <div class="certificate-info">
+                <h3> प्रमाण-पत्र विवरण </h3>
+
+                <div class="fiscal-year">
+                    {{form.fiscal_year.label_tag}}
+                    {{form.fiscal_year}}
+                </div>
+
+                <div class="certificate-date">
+                    {{form.certificate_date.label_tag}}
+                    {{form.certificate_date}}
+                </div>
+
+                <div class="certificate-num">
+                    {{form.certificate_num.label_tag}}
+                    {{form.certificate_num}}
+                </div>
+            </div>
+        </div>
+       
+        <div class="button-container">
+            <button type="submit"> व्यवसाय दर्ता </button>
+        </div>
+
+    </form>
+</body>
+</html>
